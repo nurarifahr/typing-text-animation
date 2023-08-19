@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Typing Text Animation</title>
+</head>
+<body>
+    <div class="container">
+        <span class="text first-text">I'm a</span>
+        <span class="text sec-text"></span>
+    </div>
+
+    <script>
+        const text = document.querySelector(".sec-text");
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Student";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Freelancer";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Web Developer";
+            }, 8000); //1s = 1000 miliseconds
+        }
+
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
+</body>
+</html>
